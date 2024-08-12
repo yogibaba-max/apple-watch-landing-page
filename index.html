@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apple Watch</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" />
+</head>
+
+<body>
+    <div class="container">
+        <div class="left">
+            <div class="bar">
+                <a href="#"><i class="fa-solid fa-bars-staggered"></i></a>
+            </div>
+            <div class="icon">
+                <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+            </div>
+        </div>
+        <div class="right">
+            <header>
+                <div class="menu">
+                    <a href="#"><i class="fa-brands fa-apple"></i></a>
+                    <nav>
+                        <ul  class="ol">
+                            <li>
+                                <a href="#" class="text">Mac</a>
+                            </li>
+                            <li>
+                                <a href="#">iPad</a>
+                            </li>
+                            <li>
+                                <a href="#">iPhone</a>
+                            </li>
+                            <li>
+                                <a href="#">Watch</a>
+                            </li>
+                            <li>
+                                <a href="#">Support</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="search">
+                    <a href="#">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </a>
+                    <a href="#">
+                        <i class="fa-solid fa-bag-shopping"></i>
+                    </a>
+                    <a href="#">
+                        <i class="fa-solid fa-bars-staggered" onclick="myToggle()"></i>
+                    </a>
+                </div>
+            </header>
+            <main>
+                <div class="detail">
+                    <h2 id="Perfect">The Perfect Movement</h2>
+                    <br>
+                    <h2 id="fun">Between Past And 
+                        <br>
+                    Future</h2>
+                    <button>Buy Now</button>
+                </div>
+                <div class="imgBx">
+                    <img style="width: 350px;" src="appleWatch.png" alt="apple watch">
+                </div>
+                <div class="sideimage">
+                    <img style="width: 70px ;" src="3@2x.png" alt="">
+                    <img style="width: 70px ;" src="4@2x.png" alt="">
+                    <img style="width: 70px ;" src="5@2x.png" alt="">
+                
+               </div>
+               <div>
+                <img class="color" style="width: auto;" src="ColorIndicator.png" alt="">
+               </div>
+            </main>
+        </div>
+    </div>
+    
+    <script>
+        const bar = document.querySelector('.bar');
+        const left = document.querySelector('.left');
+        bar.onclick = () => {
+            left.classList.toggle('active');
+        };
+        
+        const navBar = document.querySelector('.fa-bars-staggered')
+        const nav = document.querySelector('nav');
+        function myToggle(){
+            nav.classList.toggle('active');
+        };
+    </script>
+</body>
+
+</html>

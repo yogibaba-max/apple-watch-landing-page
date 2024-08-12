@@ -1,0 +1,442 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=IBM+Plex+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Montserrat:ital,wght@0,700;1,700&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Nunito;
+    font-size: 66.6%;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(to right, white, white);
+}
+
+.container {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background: #fff;
+    border-radius: 20  px;
+   
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    overflow: hidden;
+}
+
+.container .left {
+    position: relative;
+    width: 50px;
+    height: 100%;
+    background: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    padding: 10px 0;
+    transition: all .5s ease;
+}
+
+.container .left .bar {
+    position: relative;
+    padding-top: 8px;
+    z-index: 10;
+}
+
+.container .left .bar a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 4rem;
+    width: 40px;
+    height: 40px;
+    transition: .3s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+}
+
+.container .left.active .bar a {
+    color: #B6CCDA;
+}
+
+.container .left .bar a:hover {
+    transform: scale(1.1);
+    background: #B6CCDA;
+    color: #fff;
+}
+
+.container .left .icon {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.container .left .icon a {
+    text-decoration: none;
+    font-size: 4rem;
+    color: #B6CCDA;
+    margin-top: 10px;
+    width: 40px;
+    height: 40px;
+    transition: .3s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+}
+
+.container .left .icon a:hover {
+    transform: scale(1.1);
+    background: #B6CCDA;
+    color: #fff;
+}
+
+.container .right {
+    position: absolute;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to right,#C8DCE5,#B6CCDA );
+    border-radius: 15px 15px 15px 15px;
+    transition: width .5s ease;
+    padding: 10px 10px;
+    padding-left: 80px;
+
+}
+
+.container .left.active~.right {
+    right: 0;
+    width: 96%;
+}
+
+
+.container .right header{
+    position: relative;
+    width: calc(100% - 50px);
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.container .right header .menu {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container .right header .menu a {
+    text-decoration: none;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.container .right header .menu .fa-apple {
+    color: #fff;
+    font-size: 3.5rem;
+    transition: .3s ease;
+    margin-right: 20px;
+}
+
+.container .right header .menu .fa-apple:hover {
+    transform: scale(1.1);
+}
+
+.container .right header .menu nav {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: .5s ease-out;
+}
+
+.container .right header .menu nav ul {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container .right header .menu nav ul li {
+    list-style: none;
+    padding: 25px;
+    display: flex;
+}
+
+.container .right header .menu nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    display: inline-block;
+    font-size: 2rem;
+    transition: .3s ease;
+}
+
+.container .right header .menu nav ul li a:hover {
+    transform: scale(1.1);
+}
+
+.container .right header .search {
+    position: relative;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    z-index: 100;
+}
+
+.container .right header .search a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 3rem;
+    transition: .3s ease;
+    display: inline-block;
+    padding-left: 25px;
+}
+
+.container .right header .search a:hover {
+    transform: scale(1.1);
+}
+
+.container .right header .search a .fa-bars-staggered {
+    display: none;
+}
+
+.container .right header .menu nav.active {
+    left: -80px;
+    transition: .5s ease-out;
+
+}
+
+.container main {
+    position: relative;
+    width: 100%;
+    height: calc(100% - 50px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.container main .detail {
+    position: relative;
+
+}
+
+.container main .detail h2 {
+    font-size: 4rem;
+    color: #fff;
+}
+
+.container main .detail p {
+    font-size: 3rem;
+    color: #fff;
+}
+
+.container main .detail button {
+    padding: 15px 25px;
+    font-size: 2rem;
+    font-weight: 700;
+    color: #fff;
+    outline: none;
+    border: 4px solid #fff;
+    border-radius: 20px;
+    background: transparent;
+    margin-top: 10px;
+    cursor: pointer;
+    transition: .3s ease;
+
+}
+
+.container main .detail button:Hover {
+    transform: scale(0.9);
+}
+
+.container main .imgBx {
+    position: relative;
+}
+
+.container main .imgBx img {
+    width: 600px;
+}
+.sideimage{
+    position: absolute;
+    display: flex;
+    align-items:flex-end;
+    bottom: 20px;
+    right: 75px;
+}
+#Perfect{
+    font-family: "IBM Plex Sans", sans-serif;
+    font-size: 30px;
+}
+#fun{
+    font-family: "IBM Plex Sans", sans-serif;
+    font-weight:500;
+    font-size: 25px;
+}
+.ol{
+    font-family: "IBM Plex Sans", sans-serif;
+}
+a{
+    font-family: "IBM Plex Sans", sans-serif;
+}
+@media (max-width: 1290px) {
+    .container .left.active~.right {
+        width: 95.5%;
+    }
+}
+
+@media (max-width: 1186px) {
+    .container main {
+        justify-content: space-between;
+    }
+
+    .container main .detail h2 {
+        font-size: 3.5rem;
+        color: #fff;
+    }
+
+    .container main .detail p {
+        font-size: 2.5rem;
+        color: #fff;
+    }
+
+    .container main .imgBx img {
+        width: 500px;
+    }
+}
+
+@media (max-width: 1065px) {
+    .container .left {
+        width: 40px;
+    }
+
+    .container .left .bar a {
+        font-size: 3.5rem;
+        width: 35px;
+        height: 35px;
+    }
+
+    .container .left .icon a {
+        font-size: 3.5rem;
+        width: 35px;
+        height: 35px;
+    }
+}
+
+@media (max-width: 990px) {
+    .container .right header .search a .fa-bars-staggered {
+        display: block;
+    }
+
+    .container .right header .menu nav {
+        position: absolute;
+        width: 95vw;
+        height: 85vh;
+        background: linear-gradient(to right, #B6CCDA, #B6CCDA);
+        top: 50px;
+        left: -1090px;
+        z-index: 100;
+        border-radius: 20px;
+    }
+
+    .container .right header .menu nav ul {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .container main .detail h2 {
+        font-size: 3rem;
+        color: #fff;
+    }
+
+    .container main .detail p {
+        font-size: 2rem;
+        color: #fff;
+    }
+
+    .container main .imgBx img {
+        width: 450px;
+    }
+
+    .container .left.active~.right {
+        width: 94.5%;
+    }
+}
+
+@media (max-width: 876px) {
+    .container main .detail h2 {
+        font-size: 2.5rem;
+        color: #fff;
+    }
+
+    .container main .detail p {
+        font-size: 1.5rem;
+        color: #fff;
+    }
+
+    .container main .imgBx img {
+        width: 400px;
+    }
+
+}
+
+@media (max-width: 776px) {
+    .container main {
+        justify-content: center;
+        flex-direction: column;
+        margin-left: -30px;
+        margin-top: 30px;
+    }
+
+    .container main .imgBx img {
+        width: 350px;
+    }
+
+    .container main .detail button {
+        padding: 10px 20px;
+    }
+
+    .container .right header .menu nav {
+        height: 85vh;
+    }
+
+    .container .left.active~.right {
+        width: 93%;
+    }
+}
+@media screen and (max-width:780px) {
+    .ingBx{
+        position: absolute;
+        bottom: 0px;
+    }
+    .detail{
+    position: absolute;
+    top: 0px;
+    }
+}
+@media screen and (max-width:775px){
+    .sideimage{
+        display: none;
+    }
+}
+@media screen and (max-width:666px){
+    .imgBx{
+        
+        display: flex;
+        align-items:center ;
+    }
+    
+}
+@media screen and (max-width:666px) {
+    .color{
+        display: none;
+    }
+    
+}
